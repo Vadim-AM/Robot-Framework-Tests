@@ -28,5 +28,5 @@ Extend All checkboxes
 
 Select Random Checkboxes
     Click Element      css:#tree-node-angular
-    Select Checkbox    css:#tree-node-private
-    Select Checkbox    css:#tree-node-wordFile
+    Click Element      css:#tree-node-private
+    Click Element      css:#tree-node-wordFile
