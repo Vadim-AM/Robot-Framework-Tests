@@ -53,5 +53,6 @@ Select Each Checkbox and Check Result
         Sleep    0.5
         ${checkbox_text}=   Get Text    ${CHECKBOX}
         Sleep    0.5
+
         Element Text Should Be    css:.text-success     ${checkbox_text}
     END
