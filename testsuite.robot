@@ -46,3 +46,19 @@ Test Web Tables Add Person
     Maximize Browser Window
     Add Table Element And Check The Result
     [Teardown]    Close Browser
+
+Test Buttons
+    [Setup]    Open Browser    ${URL}/buttons       ${BROWSER}
+    Maximize Browser Window
+    Double Click Element        id:doubleClickBtn
+    Element Should Contain      id:doubleClickMessage        double
+    Click Element               xpath:/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[3]/button
+    Element Should Contain      id:dynamicClickMessage       dynamic
+    [Teardown]    Close Browser
+
+Test Links
+    [Setup]    Open Browser    ${URL}/links         ${BROWSER}
+    Maximize Browser Window
+    Click Element    xpath:/html/body/div[2]/div/div/div[2]/div[2]/div[2]/p[2]/a
+    Title Should Be    ToolsQA
+    [Teardown]    Close Browser
