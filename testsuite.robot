@@ -28,3 +28,21 @@ Test Radio Button
     Maximize Browser Window
     Select Each Checkbox And Check Result
     [Teardown]    Close Browser
+
+Test Web Tables Delete Person
+    [Setup]    Open Browser    ${URL}/webtables      ${BROWSER}
+    Maximize Browser Window
+    Delete Table Element And Check The Result
+    [Teardown]    Close Browser
+
+Test Web Tables Edit Person
+    [Setup]    Open Browser    ${URL}/webtables      ${BROWSER}
+    Maximize Browser Window
+    Edit Table Element And Check The Result
+    [Teardown]    Close Browser
+
+Test Web Tables Add Person
+    [Setup]    Open Browser    ${URL}/webtables      ${BROWSER}
+    Maximize Browser Window
+    Add Table Element And Check The Result
+    [Teardown]    Close Browser

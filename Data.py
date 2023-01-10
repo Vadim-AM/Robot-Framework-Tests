@@ -1,22 +1,26 @@
-from faker import Faker
+import random
 
-fake = Faker()
+from faker import Faker
 
 
 class Data:
+    fake = Faker()
+
+    def user_name(self):
+        return self.fake.name()
 
     @staticmethod
-    def user_name():
-        return fake.name()
+    def user_age():
+        return random.randint(0, 120)
 
-    @staticmethod
-    def user_email():
-        return fake.email()
+    def user_email(self):
+        return self.fake.email()
 
-    @staticmethod
-    def user_address():
-        return fake.address()
+    def user_address(self):
+        return self.fake.address()
 
-    @staticmethod
-    def user_current_address():
-        return fake.address()
+    def user_current_address(self):
+        return self.fake.address()
+
+    def user_department(self):
+        return self.fake.job()
