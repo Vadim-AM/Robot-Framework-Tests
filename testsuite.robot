@@ -11,15 +11,20 @@ ${BROWSER}  Chrome
 *** Test Cases ***
 
 Test Text Box
-    open browser     ${URL}/text-box   ${BROWSER}
+    [Setup]    open browser     ${URL}/text-box   ${BROWSER}
     maximize browser window
     Fill All Fields And Check Output
-    close browser
+    [Teardown]    close browser
 
 Test Check Box
-    open browser    ${URL}/checkbox    ${BROWSER}
+    [Setup]    open browser    ${URL}/checkbox    ${BROWSER}
     Maximize Browser Window
     Extend All checkboxes
-    Select Random Checkboxes
-    Sleep    3
-    close browser
+    Select Random Checkboxes And Check Result
+    [Teardown]    close browser
+
+Test Radio Button
+    [Setup]    Open Browser    ${URL}/radio-button      ${BROWSER}
+    Maximize Browser Window
+    Select Each Checkbox And Check Result
+    [Teardown]    Close Browser

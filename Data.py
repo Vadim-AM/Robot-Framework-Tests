@@ -20,4 +20,3 @@ class Data:
     @staticmethod
     def user_current_address():
         return fake.address()
-
